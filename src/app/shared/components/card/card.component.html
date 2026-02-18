@@ -1,0 +1,35 @@
+<div
+  class="bg-neutral-900 rounded-2xl m-5 shadow-lg overflow-hidden w-full md:w-64 p-4 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+>
+  <img
+    [src]="'http://127.0.0.1:8000' + item()?.image_cover"
+    alt="Xiaomi 14 Ultra"
+    class="w-32 h-40 object-contain mb-3"
+  />
+
+  <h2 class="text-white font-semibold text-lg mb-1">{{ item()?.title }}</h2>
+
+  <p class="text-gray-400 text-sm mb-2">{{ item()?.storage }}</p>
+
+  <div class="flex items-center justify-between w-full mt-auto">
+    <span class="text-yellow-500 font-bold text-lg">{{ item()?.price }} ج.م</span>
+    <button
+      class="bg-yellow-500 text-neutral-900 p-2 rounded-full hover:bg-yellow-400 transition-colors"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.4 5m0 0h12.4m-12.4 0L5 21m12.4-8L19 21M6 6h15"
+        />
+      </svg>
+    </button>
+  </div>
+</div>

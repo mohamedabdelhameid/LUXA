@@ -1,0 +1,40 @@
+<div class="mt-5 p-5">
+  <p class="text-xl md:text-5xl text-gray-500">المنتجات</p>
+
+  <div class="my-3.5">
+    <owl-carousel-o [options]="customOptions">
+      @for (item of products(); track $index) {
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide [id]="item.id">
+          <div class="px-2">
+            <app-card [item]="item"></app-card>
+          </div>
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </div>
+</div>

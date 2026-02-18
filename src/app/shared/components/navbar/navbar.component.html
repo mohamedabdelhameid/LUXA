@@ -1,0 +1,154 @@
+<nav class="bg-neutral-950 fixed w-full z-20 top-0 start-0 border-b border-neutral-800">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
+    <!-- ======= Brand Logo ======= -->
+    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="./logo-removedbg.png" class="h-15" alt="Flowbite Logo" />
+      <span class="self-center text-xl font-bold whitespace-nowrap text-yellow-500"> LUXA </span>
+    </a>
+
+    <!-- ======= Right Side: Avatar + Hamburger ======= -->
+    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <!-- Avatar Button -->
+      <button
+        type="button"
+        class="flex rounded-full ring-2 ring-transparent hover:ring-yellow-500 focus:ring-yellow-500 transition-all duration-200 md:me-0"
+        id="user-menu-button"
+        [attr.aria-expanded]="isDropdownOpen"
+        (click)="toggleDropdown()"
+      >
+        <span class="sr-only">Open user menu</span>
+        <img
+          class="w-8 h-8 rounded-full object-cover"
+          src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+          alt="user photo"
+        />
+      </button>
+
+      <!-- ======= Dropdown Menu ======= -->
+      <div
+        *ngIf="isDropdownOpen"
+        class="absolute top-17 left-4 z-50 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl w-44"
+        id="user-dropdown"
+      >
+        <!-- User Info Header -->
+        <div class="px-4 py-3 text-sm border-b border-neutral-800">
+          <span class="block text-white font-semibold">Joseph McFall</span>
+          <span class="block text-neutral-400 truncate">name&#64;flowbite.com</span>
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="p-2 text-sm font-medium text-left" aria-labelledby="user-menu-button">
+          <li>
+            <a
+              href="#"
+              class="flex w-full px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 transition-colors duration-150"
+            >
+              الصفحة الشخصية
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex w-full px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 transition-colors duration-150"
+            >
+              سلة المشتريات
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex w-full px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 transition-colors duration-150"
+            >
+              المفضلة
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex w-full px-3 py-2 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-red-400 transition-colors duration-150"
+            >
+              تسجيل خروج
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ======= Hamburger Button (mobile only) ======= -->
+      <button
+        type="button"
+        class="inline-flex items-center justify-center p-2 w-10 h-10 text-neutral-400 rounded-lg md:hidden hover:bg-neutral-800 hover:text-yellow-400 transition-colors duration-150"
+        aria-controls="navbar-links"
+        [attr.aria-expanded]="isMenuOpen"
+        (click)="toggleMenu()"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+            d="M5 7h14M5 12h14M5 17h14"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ======= Nav Links ======= -->
+    <div class="w-full md:flex md:w-auto md:order-1" [class.hidden]="!isMenuOpen" id="navbar-links">
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:mt-0 border border-neutral-800 rounded-lg bg-neutral-900 md:flex-row md:space-x-1 md:border-0 md:bg-transparent rtl:space-x-reverse"
+      >
+        <!-- Active link: gold text, bold -->
+        <li>
+          <a
+            href="#"
+            aria-current="page"
+            class="block py-2 px-3 rounded-md font-semibold text-yellow-500 md:bg-transparent md:p-2 md:hover:text-yellow-400 transition-colors duration-150"
+          >
+            الرئيسية
+          </a>
+        </li>
+
+        <!-- Regular links -->
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 md:hover:bg-transparent md:p-2 transition-colors duration-150"
+          >
+            عنLUXA
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 md:hover:bg-transparent md:p-2 transition-colors duration-150"
+          >
+            متجرنا
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 md:hover:bg-transparent md:p-2 transition-colors duration-150"
+          >
+            بحث عن هاتف
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-yellow-400 md:hover:bg-transparent md:p-2 transition-colors duration-150"
+          >
+            تواصل معنا
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
